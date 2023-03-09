@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">IPTV Player</string>
+    <string name="returned_from_app_settings_to_activity">
+        Returned from app settings to MainActivity with the following permissions:
+        \n\nRead File: %s
+    </string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="file_permission_success">File permission success</string>
+    <string name="rationale_read_file">"You need to give permission to access files "</string>
+    <string name="file_select">Please select file</string>
+    <string name="select">Select</string>
+    <string name="file_location">file location......</string>
+    <string name="info_file_select">You can import the list by selecting the m3u file.</string>
+    <string name="success_file_read">File read successfully</string>
+    <string name="count_save_list">count %d</string>
+    <string name="category">Categories</string>
+    <string name="channels">Channel List</string>
+    <string name="main_page_title">Home</string>
+    <string name="favorite_page_title">Favorite</string>
+    <string name="about_page_title">About us</string>
+    <string name="search_title">Search channel</string>
+    <string name="search_hint">Search channel</string>
+    <string name="channel_count">Channel Count: %d</string>
+    <!--ERRORS-->
+    <string name="mime_error">It only supports m3u files for now.</string>
+    <string name="error_file_read">file read error: %d</string>
+    <string name="error_file_read_exp">File read error please check m3u file</string>
+    <string name="error_save_list">Error writing list to local</string>
+    <string name="play">play</string>
+    <string name="pause">pause</string>
+    <string name="previous">previous</string>
+    <string name="next">next</string>
+    <!--ERRORS-->
+</resources>
