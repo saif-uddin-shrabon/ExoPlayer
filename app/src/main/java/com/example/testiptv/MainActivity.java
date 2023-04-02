@@ -1,8 +1,5 @@
 package com.example.testiptv;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,12 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -42,94 +34,13 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.urlbtn);
         ch = findViewById(R.id.getch);
 
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String Url = url.getText().toString().trim();
-//                String chnnel = ch.getText().toString();
-//
-//
-////                String url = "https://iptv-org.github.io/iptv/countries/br.m3u";
-//
-//                try {
-//                    URL urlObj = new URL(Url);
-//                    HttpURLConnection conn = (HttpURLConnection) urlObj.openConnection();
-//                    conn.setRequestMethod("GET");
-//                    conn.connect();
-//
-//                    BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-//                    String line;
-//                    List<Map<String, String>> channels = new ArrayList<>();
-//                    Map<String, String> currentChannel = new HashMap<>();
-//
-//                    while ((line = reader.readLine()) != null) {
-//                        line = line.trim();
-//
-//                        if (line.startsWith("#EXTINF:")) {
-//                            String[] info = line.split(",(.+)", 2);
-//                            currentChannel.put("name", info[1]);
-//                            String logo = line.replaceAll(".tvg-logo=\"([^\"])\".*", "$1");
-//                            currentChannel.put("logo", logo);
-//                        } else if (line.startsWith("http")) {
-//                            currentChannel.put("url", line);
-//                            channels.add(currentChannel);
-//                            currentChannel = new HashMap<>();
-//                        }
-//                    }
-//                    reader.close();
-//                    conn.disconnect();
-//
-//                    Log.d("Channels", channels.toString());
-//
-//                } catch (IOException e) {
-//                    throw new RuntimeException(e);
-//                }
-//
-//
-//
-//            }
-//        });
-
-//                new AsyncTask<String, Void, List<String>>() {
-//                    @Override
-//                    protected List<String> doInBackground(String... params) {
-//                        String Url = params[0];
-//                        try {
-//                            URL url = new URL(Url);
-//                            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-//                            conn.setRequestMethod("GET");
-//                            conn.connect();
-//
-//                            BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-//                            String line;
-//                            List<String> links = new ArrayList<>();
-//                            while ((line = reader.readLine()) != null) {
-//                                if (line.startsWith("http")) {
-//                                    links.add(line);
-//                                }
-//                            }
-//                            reader.close();
-//                            conn.disconnect();
-//
-//                            return links;
-//
-//                        } catch (IOException e) {
-//                            throw new RuntimeException(e);
-//                        }
-//                    }
-//
-//                    @Override
-//                    protected void onPostExecute(List<String> links) {
-//                        Log.d("Links", links.toString());
-//                    }
-//                }.execute(Url);
 
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String Url = url.getText().toString().trim();
-                String chnnel = ch.getText().toString();
+//                String chnnel = ch.getText().toString();
                 new GetChannelsTask().execute(Url);
             }
         });
