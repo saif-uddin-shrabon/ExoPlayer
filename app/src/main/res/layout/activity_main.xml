@@ -36,6 +36,16 @@
             android:text="OPEN"
             />
 
+        <Button
+            android:id="@+id/sbtn"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Show Data"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
 
     </LinearLayout>
 

@@ -14,6 +14,14 @@
             android:id="@+id/viewImage"
             android:src="@drawable/baseline_http_24"/>
         <TextView
+            android:id="@+id/cadName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Channer Name"
+            android:textSize="20dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/cadlink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Channer Name"

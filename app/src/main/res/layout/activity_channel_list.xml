@@ -6,13 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".channelList">
 
-    <GridView
-        android:layout_marginTop="40dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="3"
-        android:horizontalSpacing="6dp"
-        android:verticalSpacing="6dp"
-        android:id="@+id/channelist"/>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
